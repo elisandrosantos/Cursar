@@ -1,0 +1,72 @@
+/* Basic reset */
+*, html, body {
+    font-family: 'Exo 2', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+/*  */
+h1, h2, h3, h4, h5, h6, p {
+	font-weight: 300;
+}
+/*  */
+a {cursor: pointer}
+/* Colors */
+:root { /* Santiago Gimenez add-on */
+	--gray: #5b616d;
+	--darkBlue: #043345;
+	--violet: #5375e1;
+	--darkCyan: #0d9aac;
+	--cyan: #01b6c7;
+	--darkGreen: #009865;
+	--white: #fefefe;
+	/*	*/
+	--paragraphSize: 1rem;
+	/* --lineHeight: 2rem; */
+	/*  */
+	--gap: 20px;
+	--gap-md: 10px;
+	--gap-sm: 5px;
+	/*  */
+	--animation-timing: .5s;
+}
+/* Margin */
+.marginLeft, .margin-left {margin-left: var(--gap) !important}
+.marginTop, .margin-top {margin-top: var(--gap) !important}
+.marginBottom, .margin-bottom {margin-bottom: var(--gap) !important}
+.marginRight, .margin-right {margin-right: var(--gap) !important}
+/* Padding */
+.padding {padding: var(--gap) !important}
+/* Text */
+.textLeft {text-align: left}
+.textCenter {text-align: center}
+.textRight {text-align: right}
+/* Lists */
+ul.minimal {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+ul {
+	line-height: 32px;
+	font-size: 16px;
+}
+/* Clases que usamos en 99% de elementos, así que vale la pena re-utilizar */
+.rounded {
+    border-radius: var(--gap-md);
+}
+.border {
+	border: 1px solid var(--gray);
+}
+/* Responsive styling */
+.removeMobile, .removeMobileInline {
+	display: none !important;
+}
+@media (min-width: 768px) {
+	.removeMobile {display: block !important}
+	.removeMobileInline {display: inline-block !important}
+}
