@@ -1,4 +1,7 @@
-[class*=grid] {display: grid}
+[class*=grid] {
+    width: 100%; /* hotfix for ul/ol */
+    display: grid
+}
 [class*=grid].center {
     align-items: center;
     text-align: center
