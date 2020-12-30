@@ -22,9 +22,18 @@ h1, h2, h3, h4, h5, h6, p {
 p {
 	font-size: 20px;
 	line-height: 30px;
+	/* word wrap with style :P */
+	word-wrap: break-word;
+    -moz-hyphens:auto; 
+    -webkit-hyphens:auto; 
+    -o-hyphens:auto; 
+    hyphens: auto;
 }
 /*  */
-a {cursor: pointer}
+a {
+	cursor: pointer;
+	text-decoration: none;
+}
 /* Colors */
 :root { /* Santiago Gimenez add-on */
 	--gray: #5b616d;
@@ -74,6 +83,10 @@ ul.minimal {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+}
+ul.inline li {
+	float: left;
+	margin: 0 var(--gap-md) 0 var(--gap-md)
 }
 ul {
 	line-height: 32px;

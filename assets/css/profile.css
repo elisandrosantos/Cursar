@@ -1,0 +1,185 @@
+#profile #header.grid-2 {
+    grid-template-columns: 100%;
+    margin-top: var(--gap);
+}
+@media (min-width: 1152px) {
+    #profile #header.grid-2 {
+        grid-template-columns: 40% auto;
+    }  
+}
+#profile #basicInfo {
+    padding: var(--gap);
+    border-radius: var(--gap-md);
+    background: var(--darkBlue);
+    position: relative;
+}
+#profile .editBtn { /* used in #basicInfo & #homeWork */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: var(--gap-md);
+    background: var(--darkCyan);
+    color: var(--white);
+    border-radius: var(--gap-md) var(--gap-md) 0 0;
+    transition: var(--animation-timing) ease-out;
+    text-align: center;
+}
+#profile #basicInfo .editBtn:hover {
+    background: var(--cyan);
+}
+#profile #basicInfo .nameAndRole a {
+    color: var(--gray-alt);
+    transform: rotate(45deg);
+}
+#profile #basicInfo .nameAndRole.grid-2 {
+    margin: 40px 0 var(--gap) 0; /* margin for .editBtn */
+    grid-template-columns: 100%;
+}
+@media (min-width: 1152px) {
+    #profile #basicInfo .nameAndRole.grid-2 {
+        grid-template-columns: 128px auto;
+    }
+}
+#profile #basicInfo .avatar {
+    width: 128px;
+    height: 128px;
+    margin: 0 auto;
+    border-radius: 100%;
+    background: var(--white) center / cover;
+}
+@media (min-width: 1152px) {
+    #profile #basicInfo .avatar {
+        margin: 0;
+    }
+}
+#profile #basicInfo .avatar.default {
+    background-image: url('../img/avatar/default1.webp');
+}
+#profile .mainScore {
+    width: 150px;
+    height: 75px;
+    margin: 0 auto var(--gap) auto;
+    border-radius: 0 0 100% 100%;
+    position: relative;
+}
+#profile .mainScore .score {
+    width: calc(100% + 10px);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    background: var(--darkBlue);
+    text-align: center;
+}
+#profile .mainScore .animationWrapper {
+    animation: mainScoreFade 2s ease-out;
+}
+@keyframes mainScoreFade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#profile .mainScore .score span {
+    font-size: 14px;
+    color: var(--gray);
+}
+#profile ul#allScoresWrapper {
+    width: 252px;
+    margin: 0 auto;
+}
+#profile ul#allScoresWrapper li {
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    margin: var(--gap-sm);
+    display: inline-block;
+    border-radius: 100%;
+    color: var(--white);
+}
+/*  */
+#profile #homeWork {
+    background: var(--gray-alt);
+    border-radius: var(--gap-md);
+    max-height: 500px;
+    overflow-y: auto;
+    /* padding: var(--gap); */
+    position: relative;
+}
+#profile #homeWork ul#status {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+#profile #homeWork ul#status li {
+    width: 50%;
+    float: left;
+    padding: var(--gap-sm);
+    border-radius: 0 0 0 var(--gap-md);
+    background: var(--darkCyan);
+    color: var(--white);
+}
+#profile #homeWork ul#status li.done {
+    background: var(--darkGreen) !important;
+    border-radius: 0 0 var(--gap-md) 0;
+}
+#profile #homeWork ul#list {
+    margin: 40px 0 40px 0;
+}
+#profile #homeWork ul#list li a {
+    display: block;
+    color: var(--white);
+    padding: var(--gap-md);
+}
+#profile #homeWork ul#list li:nth-child(1n) a {
+    background: var(--gray-alt);
+}
+#profile #homeWork ul#list li:nth-child(2n) a {
+    background: var(--darkBlue);
+}
+/*  */
+#profile #calendarWrapper{
+    width: 100%;
+    margin-top: var(--gap);
+}
+#profile #calendarWrapper #firstCalendar {
+    width: 100%;
+    background: var(--darkBlue);
+    border-radius: var(--gap-md);
+    position: relative;
+    padding: var(--gap);
+}
+/* #profile #calendarWrapper #firstCalendar ul#calendarDays {
+    width: 100%;
+    padding: var(--gap-sm);
+    background: var(--darkCyan);
+    border-radius: var(--gap-md) var(--gap-md) 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+#profile #calendarWrapper #firstCalendar ul.grid-7 {
+    grid-template-columns: repeat(7, 50px);
+}
+#profile #calendarWrapper #firstCalendar ul.grid-7 li {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    padding-top: 5px;
+    text-align: center;
+    border: 1px solid transparent;
+}
+#profile #calendarWrapper #firstCalendar #calendar {
+    margin-top: 40px;
+}
+#profile #calendarWrapper #firstCalendar ul#calendar.calendarBullets li:hover {
+    border: 1px solid var(--gray-alt);
+}
+@media (min-width: 1024px) {
+    #profile #calendarWrapper #firstCalendar ul#calendar.grid-7 {
+        grid-template-columns: repeat(7, 50px);
+    }
+}
