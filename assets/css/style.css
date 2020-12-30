@@ -8,19 +8,27 @@
 body {
 	overflow-x: hidden;
 	overflow-y: scroll;
+	background: var(--gray);
 }
 /*  */
-h1, h2, h3, h4, h5 {
-	font-weight: 600;
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: var(--gap);
 }
 h1, h2, h3, h4, h5, h6, p {
 	font-family: 'Asap', sans-serif;
+	font-weight: 300;
+	color: var(--white);
+}
+p {
+	font-size: 20px;
+	line-height: 30px;
 }
 /*  */
 a {cursor: pointer}
 /* Colors */
 :root { /* Santiago Gimenez add-on */
 	--gray: #5b616d;
+	--gray-alt: #8990a0;
 	--darkBlue: #043345;
 	--violet: #5375e1;
 	--darkCyan: #0d9aac;
@@ -38,6 +46,7 @@ a {cursor: pointer}
 	/*  */
 	--animation-timing: .5s;
 }
+.legend {color: var(--gray-alt)}
 /* Main */
 main.wrapper {
 	width: 80%;
@@ -52,6 +61,7 @@ main.wrapper {
 /* Padding */
 .padding {padding: var(--gap) !important}
 /* Border */
+.border.cyan {border: var(--gap-sm) solid var(--cyan)}
 .border.darkGreen {border: var(--gap-sm) solid var(--darkGreen)}
 .border.darkBlue {border: var(--gap-sm) solid var(--darkBlue)}
 .border.red {border: var(--gap-sm) solid var(--red)}
