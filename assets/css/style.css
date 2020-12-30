@@ -10,8 +10,11 @@ body {
 	overflow-y: scroll;
 }
 /*  */
+h1, h2, h3, h4, h5 {
+	font-weight: 600;
+}
 h1, h2, h3, h4, h5, h6, p {
-	font-weight: 300;
+	font-family: 'Asap', sans-serif;
 }
 /*  */
 a {cursor: pointer}
@@ -23,6 +26,7 @@ a {cursor: pointer}
 	--darkCyan: #0d9aac;
 	--cyan: #01b6c7;
 	--darkGreen: #009865;
+	--red: #f65867;
 	--white: #fefefe;
 	/*	*/
 	--paragraphSize: 1rem;
@@ -34,6 +38,12 @@ a {cursor: pointer}
 	/*  */
 	--animation-timing: .5s;
 }
+/* Main */
+main.wrapper {
+	width: 80%;
+	margin: 0 auto;
+	/* 20% reserved for sidebar */
+}
 /* Margin */
 .marginLeft, .margin-left {margin-left: var(--gap) !important}
 .marginTop, .margin-top {margin-top: var(--gap) !important}
@@ -41,6 +51,10 @@ a {cursor: pointer}
 .marginRight, .margin-right {margin-right: var(--gap) !important}
 /* Padding */
 .padding {padding: var(--gap) !important}
+/* Border */
+.border.darkGreen {border: var(--gap-sm) solid var(--darkGreen)}
+.border.darkBlue {border: var(--gap-sm) solid var(--darkBlue)}
+.border.red {border: var(--gap-sm) solid var(--red)}
 /* Text */
 .textLeft {text-align: left}
 .textCenter {text-align: center}
