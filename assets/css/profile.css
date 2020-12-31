@@ -1,9 +1,21 @@
-#profile #header.grid-2 {
-    grid-template-columns: 100%;
-    margin-top: var(--gap);
+#profile {
+    padding: var(--gap) 0 var(--gap) 0;
 }
-@media (min-width: 1152px) {
-    #profile #header.grid-2 {
+#profile #basicInfo, #profile #homeWork {
+    min-height: 600px;
+}
+#profile #basicInfo, #profile #homeWork, #profile #sendWorkShortcut {
+    background: var(--darkBlue);
+    border-radius: var(--gap-md);
+    position: relative;
+    padding: var(--gap-md);
+}
+/*  */
+#profile.grid-2 {
+    grid-template-columns: 100%;
+}
+@media (min-width: 1280px) {
+    #profile.grid-2 {
         grid-template-columns: 40% auto;
     }  
 }
@@ -11,7 +23,6 @@
     padding: var(--gap);
     border-radius: var(--gap-md);
     background: var(--darkBlue);
-    position: relative;
 }
 #profile .editBtn { /* used in #basicInfo & #homeWork */
     width: 100%;
@@ -21,6 +32,7 @@
     padding: var(--gap-md);
     background: var(--darkCyan);
     color: var(--white);
+    font-size: 18px;
     border-radius: var(--gap-md) var(--gap-md) 0 0;
     transition: var(--animation-timing) ease-out;
     text-align: center;
@@ -36,7 +48,7 @@
     margin: 40px 0 var(--gap) 0; /* margin for .editBtn */
     grid-template-columns: 100%;
 }
-@media (min-width: 1152px) {
+@media (min-width: 1280px) {
     #profile #basicInfo .nameAndRole.grid-2 {
         grid-template-columns: 128px auto;
     }
@@ -48,7 +60,7 @@
     border-radius: 100%;
     background: var(--white) center / cover;
 }
-@media (min-width: 1152px) {
+@media (min-width: 1280px) {
     #profile #basicInfo .avatar {
         margin: 0;
     }
@@ -101,12 +113,12 @@
 }
 /*  */
 #profile #homeWork {
-    background: var(--gray-alt);
+    background: var(--darkBlue);
     border-radius: var(--gap-md);
     max-height: 500px;
     overflow-y: auto;
+    padding: 0;
     /* padding: var(--gap); */
-    position: relative;
 }
 #profile #homeWork ul#status {
     width: 100%;
@@ -133,53 +145,47 @@
     display: block;
     color: var(--white);
     padding: var(--gap-md);
+    transition: var(--animation-timing) ease-out;
 }
-#profile #homeWork ul#list li:nth-child(1n) a {
-    background: var(--gray-alt);
-}
-#profile #homeWork ul#list li:nth-child(2n) a {
-    background: var(--darkBlue);
+#profile #homeWork ul#list li a:hover {
+    padding: var(--gap-md) var(--gap-md) var(--gap-md) var(--gap);
 }
 /*  */
-#profile #calendarWrapper{
-    width: 100%;
-    margin-top: var(--gap);
-}
-#profile #calendarWrapper #firstCalendar {
-    width: 100%;
+#profile #sendWorkShortcut {
     background: var(--darkBlue);
     border-radius: var(--gap-md);
-    position: relative;
-    padding: var(--gap);
+    padding-top: 50px;
 }
-/* #profile #calendarWrapper #firstCalendar ul#calendarDays {
+/*  */
+#profile #calendarWrapper {
     width: 100%;
-    padding: var(--gap-sm);
+}
+#profile #calendarWrapper ul#calendarDays {
     background: var(--darkCyan);
     border-radius: var(--gap-md) var(--gap-md) 0 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-} */
-#profile #calendarWrapper #firstCalendar ul.grid-7 {
-    grid-template-columns: repeat(7, 50px);
-}
-#profile #calendarWrapper #firstCalendar ul.grid-7 li {
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    padding-top: 5px;
+    padding: var(--gap-md);
+    font-size: 18px;
     text-align: center;
+}
+#profile #calendarWrapper ul#calendarDates {
+    background: var(--darkBlue);
+    border-radius: 0 0 var(--gap-md) var(--gap-md);
+    padding: var(--gap-md);
+}
+#profile #calendarWrapper ul#calendarDates li a {
+    color: var(--white);
     border: 1px solid transparent;
 }
-#profile #calendarWrapper #firstCalendar #calendar {
-    margin-top: 40px;
-}
-#profile #calendarWrapper #firstCalendar ul#calendar.calendarBullets li:hover {
+#profile #calendarWrapper ul#calendarDates.calendarBullets li a:hover {
     border: 1px solid var(--gray-alt);
 }
+#profile #calendarWrapper .details {
+    border-left: var(--gap-sm) solid var(--cyan);
+    padding-left: var(--gap);
+    border-radius: var(--gap-md) 0 0 var(--gap-md);
+}
 @media (min-width: 1024px) {
-    #profile #calendarWrapper #firstCalendar ul#calendar.grid-7 {
-        grid-template-columns: repeat(7, 50px);
+    #profile #calendarWrapper ul#calendarDays.grid-7, #profile #calendarWrapper ul#calendarDates.grid-7 {
+        grid-template-columns: repeat(7, 1fr);
     }
 }

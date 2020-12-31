@@ -62,6 +62,8 @@ main.wrapper {
 	margin: 0 auto;
 	/* 20% reserved for sidebar */
 }
+/* Centering */
+div.center, .button.center {margin: 0 auto}
 /* Margin */
 .marginLeft, .margin-left {margin-left: var(--gap) !important}
 .marginTop, .margin-top {margin-top: var(--gap) !important}
@@ -78,11 +80,18 @@ main.wrapper {
 .textLeft {text-align: left}
 .textCenter {text-align: center}
 .textRight {text-align: right}
+span.danger, p.danger {
+	color: var(--red);
+}
 /* Lists */
 ul.minimal {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+}
+ul.minimal li {
+	padding: 0;
+	margin: 0;
 }
 ul.inline li {
 	float: left;
