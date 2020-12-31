@@ -6,6 +6,7 @@
     <!-- Basic CSS styling -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/grid.css" />
+    <link rel="stylesheet" href="assets/css/button.css" />
     <!-- Profile CSS -->
     <link rel="stylesheet" href="assets/css/profile.css" />
     <!-- Google Fonts -->
@@ -17,67 +18,76 @@
     <title>Mi perfil | Cursar</title>
 </head>
 <body>
-    <main id="profile" class="wrapper">
+    <main id="profile" class="wrapper grid-2 gap">
 
-        <div id="header" class="grid-2 gap">
-
-            <div id="basicInfo">
-                <a href="#" class="editBtn">
-                    Editar mis datos <i class="fas fa-user-edit"></i>
-                </a>
-                <div class="nameAndRole grid-2 center gap">
-                    <div class="avatar default"></div>
-                    <div>
-                        <h1>Santiago Gimenez</h1>
-                        <h2 class="legend">
-                            Estudiante
-                        </h2>
+        <div id="basicInfo" class="grid center">
+            <a href="#" class="editBtn">
+                Editar mis datos <i class="fas fa-user-edit"></i>
+            </a>
+            <div class="nameAndRole grid-2 center gap">
+                <div class="avatar default"></div>
+                <div>
+                    <h1>Santiago Agustín Gimenez</h1>
+                    <h2 class="legend">
+                        Estudiante
+                    </h2>
+                </div>
+            </div>
+            <div class="titles textCenter">
+                <h2>Promedio general</h2>
+                <h3 class="legend">Universidad Tecnológica Nacional</h3>
+            </div>
+            <div class="mainScore border darkGreen">
+                <h3 class="score">
+                    <div class="animationWrapper">
+                        7.6<br />
+                        <span>puntos</span>
                     </div>
-                </div>
-                <div class="titles textCenter">
-                    <h2>Promedio general</h2>
-                    <h3 class="legend">Universidad Tecnológica Nacional</h3>
-                </div>
-                <div class="mainScore border darkGreen">
-                    <h3 class="score">
-                        <div class="animationWrapper">
-                            7.9<br />
-                            <span>puntos</span>
-                        </div>
-                    </h3>
-                </div>
-
-                <ul id="allScoresWrapper" class="minimal">
-                    <li class="border red">5.1</li>
-                    <li class="border cyan">8.3</li>
-                    <li class="border darkGreen">9.0</li>
-                    <li class="border cyan">7.8</li>
-                </ul>
+                </h3>
             </div>
 
-            <div id="homeWork">
-                <a href="#" class="editBtn">
-                    Añadir tarea personalizada <i class="fas fa-thumbtack"></i>
-                </a>
-                <ul id="list" class="minimal">
-                    <li><a href="#">Dominar el mundo para ayer</a></li>
-                    <li><a href="#">Crear un clon de Mercado Libre en un mes</a></li>
-                    <li><a href="#">Cocinar, trabajar, criar bendiciones, dormir</a></li>
-                    <li><a href="#">Hacerle creer a un pelado que tiene razón</a></li>
-                    <li><a href="#">Picar código como UN MONITO PICA-TECLA</a></li>
-                    <li><a href="#">Hacer noni</a></li>
-                </ul>
-                <ul id="status" class="minimal textCenter">
-                    <li>Pendientes</li>
-                    <li class="done">Completadas</li>
-                </ul>
-            </div>
+            <ul id="allScoresWrapper" class="minimal">
+                <li class="border red">5.1</li>
+                <li class="border cyan">8.3</li>
+                <li class="border darkGreen">9.0</li>
+                <li class="border cyan">7.8</li>
+            </ul>
+        </div>
 
+        <div id="homeWork">
+            <a href="#" class="editBtn">
+                Añadir tarea personalizada <i class="fas fa-thumbtack"></i>
+            </a>
+            <ul id="list" class="minimal">
+                <li><a href="#">Dominar el mundo para ayer</a></li>
+                <li><a href="#">Crear un clon de Mercado Libre en un mes</a></li>
+                <li><a href="#">Cocinar, trabajar, criar bendiciones, dormir</a></li>
+                <li><a href="#">Hacerle creer a un pelado que tiene razón</a></li>
+                <li><a href="#">Picar código como UN MONITO PICA-TECLA</a></li>
+                <li><a href="#">Hacer noni</a></li>
+            </ul>
+            <ul id="status" class="minimal textCenter">
+                <li>Pendientes</li>
+                <li class="done">Completadas</li>
+            </ul>
+        </div>
+
+        <div id="sendWorkShortcut" class="grid center">
+            <a href="#" class="editBtn">
+                Necesito ayuda <i class="fas fa-thumbtack"></i>
+            </a>
+            <h2>Entrega tu tarea <span class="danger">urgente</span>.</h2>
+            <h3 class="legend">Debes entregarla en menos de 1 hora.</h3>
+            <h4>Sistemas operativos: "Explicar los 4 métodos de compresión explicados en clase"</h4>
+            <div class="grid-2 center gap">
+                <p>Si ya la has terminado, sube tu tarea.</p>
+                <button class="button upload center">Subir <i class="fas fa-upload"></i></button>
+            </div>
         </div>
 
         <div id="calendarWrapper" class="grid-2 gap">
             <!-- Calendario que haga un flip al seleccionar la fecha, para mostrar más info -->
-            <div id="firstCalendar">
+            <div>
                 <ul id="calendarDays" class="minimal grid-7 gap">
                     <li>D</li>
                     <li>L</li>
@@ -87,45 +97,112 @@
                     <li>V</li>
                     <li>S</li>
                 </ul>
-                <ul id="calendar" class="calendarBullets minimal grid-7 gap">
-                    <li>29</li>
-                    <li>30</li>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                    <li>7</li>
-                    <li>8</li>
-                    <li>9</li>
-                    <li>10</li>
-                    <li>11</li>
-                    <li>12</li>
-                    <li>13</li>
-                    <li>14</li>
-                    <li>15</li>
-                    <li>16</li>
-                    <li>17</li>
-                    <li>18</li>
-                    <li>19</li>
-                    <li>20</li>
-                    <li>21</li>
-                    <li>22</li>
-                    <li>23</li>
-                    <li>24</li>
-                    <li>25</li>
-                    <li>26</li>
-                    <li>27</li>
-                    <li>28</li>
-                    <li>29</li>
-                    <li>30</li>
-                    <li>31</li>
+                <ul id="calendarDates" class="calendarBullets minimal grid-7 gap">
+                    <li class="legend">29</li>
+                    <li class="legend">30</li>
+                    <li>
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                    <li>
+                        <a href="#">6</a>
+                    </li>
+                    <li>
+                        <a href="#">7</a>
+                    </li>
+                    <li>
+                        <a href="#">8</a>
+                    </li>
+                    <li>
+                        <a href="#">9</a>
+                    </li>
+                    <li>
+                        <a href="#">10</a>
+                    </li>
+                    <li>
+                        <a href="#">11</a>
+                    </li>
+                    <li>
+                        <a href="#">12</a>
+                    </li>
+                    <li>
+                        <a href="#">13</a>
+                    </li>
+                    <li>
+                        <a href="#">14</a>
+                    </li>
+                    <li>
+                        <a href="#">15</a>
+                    </li>
+                    <li>
+                        <a href="#">16</a>
+                    </li>
+                    <li>
+                        <a href="#">17</a>
+                    </li>
+                    <li>
+                        <a href="#">18</a>
+                    </li>
+                    <li>
+                        <a href="#">19</a>
+                    </li>
+                    <li>
+                        <a href="#">20</a>
+                    </li>
+                    <li>
+                        <a href="#">21</a>
+                    </li>
+                    <li>
+                        <a href="#">22</a>
+                    </li>
+                    <li>
+                        <a href="#">23</a>
+                    </li>
+                    <li>
+                        <a href="#">24</a>
+                    </li>
+                    <li>
+                        <a href="#">25</a>
+                    </li>
+                    <li>
+                        <a href="#">26</a>
+                    </li>
+                    <li>
+                        <a href="#">27</a>
+                    </li>
+                    <li>
+                        <a href="#">28</a>
+                    </li>
+                    <li>
+                        <a href="#">29</a>
+                    </li>
+                    <li>
+                        <a href="#">30</a>
+                    </li>
+                    <li>
+                        <a href="#">31</a>
+                    </li>
                 </ul>
             </div>
-            
-        </div>
 
+            <div class="details">
+                <h2>31 de Diciembre</h2>
+                <h3 class="legend">Detalles</h3>
+                <p>En este día se festeja fin de año.</p>
+            </div>
+
+        </div> <!-- !#calendarWrapper -->
 
     </main>
 </body>
