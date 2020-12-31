@@ -163,7 +163,7 @@
 #profile #calendarWrapper ul#calendarDays {
     background: var(--darkCyan);
     border-radius: var(--gap-md) var(--gap-md) 0 0;
-    padding: var(--gap-md);
+    padding: var(--gap-sm);
     font-size: 18px;
     text-align: center;
 }
@@ -184,8 +184,7 @@
     padding-left: var(--gap);
     border-radius: var(--gap-md) 0 0 var(--gap-md);
 }
-@media (min-width: 1024px) {
-    #profile #calendarWrapper ul#calendarDays.grid-7, #profile #calendarWrapper ul#calendarDates.grid-7 {
-        grid-template-columns: repeat(7, 1fr);
-    }
+/* Removing responsive stuff, because the calendar needs show a 7 grid */
+#profile #calendarWrapper ul#calendarDays.grid-7, #profile #calendarWrapper ul#calendarDates.grid-7 {
+    grid-template-columns: repeat(7, 1fr);
 }
