@@ -20,7 +20,7 @@
 <body>
     <main id="profile" class="wrapper grid-2 gap">
 
-        <div id="basicInfo" class="grid center">
+        <div id="basicInfo" class="basicInfo grid center rounded">
             <a href="#" class="editBtn">
                 Editar mis datos <i class="fas fa-user-edit"></i>
             </a>
@@ -54,7 +54,146 @@
             </ul>
         </div>
 
-        <div id="homeWork">
+        <div>
+            <div id="sendWorkShortcut" class="grid center rounded">
+                <a href="#" class="editBtn">
+                    Necesito ayuda <i class="fas fa-thumbtack"></i>
+                </a>
+                <h2>Entrega tu tarea <span class="danger">urgente</span>.</h2>
+                <h3 class="legend">Debes entregarla en menos de 1 hora.</h3>
+                <h4>Sistemas operativos: "Explicar los 4 métodos de compresión explicados en clase"</h4>
+                <div class="grid-2 center gap">
+                    <p>Si ya la has terminado, sube tu tarea.</p>
+                    <button class="button upload center">Subir <i class="fas fa-upload"></i></button>
+                </div>
+            </div>
+    
+            <div id="calendarWrapper" class="grid-2 gap rounded">
+                <!-- Calendario que haga un flip al seleccionar la fecha, para mostrar más info -->
+                <div>
+                    <ul id="calendarDays" class="minimal grid-7 gap">
+                        <li>D</li>
+                        <li>L</li>
+                        <li>M</li>
+                        <li>X</li>
+                        <li>J</li>
+                        <li>V</li>
+                        <li>S</li>
+                    </ul>
+                    <ul id="calendarDates" class="calendarBullets minimal grid-7 gap">
+                        <li>
+                            <a href="#" class="legend"><</a>
+                        </li>
+                        <li class="legend">30</li>
+                        <li>
+                            <a href="#">1</a>
+                        </li>
+                        <li>
+                            <a href="#">2</a>
+                        </li>
+                        <li>
+                            <a href="#">3</a>
+                        </li>
+                        <li>
+                            <a href="#">4</a>
+                        </li>
+                        <li>
+                            <a href="#">5</a>
+                        </li>
+                        <li>
+                            <a href="#">6</a>
+                        </li>
+                        <li>
+                            <a href="#">7</a>
+                        </li>
+                        <li>
+                            <a href="#">8</a>
+                        </li>
+                        <li>
+                            <a href="#">9</a>
+                        </li>
+                        <li>
+                            <a href="#">10</a>
+                        </li>
+                        <li>
+                            <a href="#">11</a>
+                        </li>
+                        <li>
+                            <a href="#">12</a>
+                        </li>
+                        <li>
+                            <a href="#">13</a>
+                        </li>
+                        <li>
+                            <a href="#">14</a>
+                        </li>
+                        <li>
+                            <a href="#">15</a>
+                        </li>
+                        <li>
+                            <a href="#">16</a>
+                        </li>
+                        <li>
+                            <a href="#">17</a>
+                        </li>
+                        <li>
+                            <a href="#">18</a>
+                        </li>
+                        <li>
+                            <a href="#">19</a>
+                        </li>
+                        <li>
+                            <a href="#">20</a>
+                        </li>
+                        <li>
+                            <a href="#">21</a>
+                        </li>
+                        <li>
+                            <a href="#">22</a>
+                        </li>
+                        <li>
+                            <a href="#">23</a>
+                        </li>
+                        <li>
+                            <a href="#">24</a>
+                        </li>
+                        <li>
+                            <a href="#">25</a>
+                        </li>
+                        <li>
+                            <a href="#">26</a>
+                        </li>
+                        <li>
+                            <a href="#">27</a>
+                        </li>
+                        <li>
+                            <a href="#">28</a>
+                        </li>
+                        <li>
+                            <a href="#">29</a>
+                        </li>
+                        <li>
+                            <a href="#">30</a>
+                        </li>
+                        <li>
+                            <a href="#">31</a>
+                        </li>
+                        <li>
+                            <a href="#" class="legend">></a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="details">
+                    <h2>31 de Diciembre</h2>
+                    <h3 class="legend">Detalles</h3>
+                    <p>En este día se festeja fin de año.</p>
+                </div>
+    
+            </div> <!-- !#calendarWrapper -->
+        </div>
+
+        <div id="homeWork" class="rounded">
             <a href="#" class="editBtn">
                 Añadir tarea personalizada <i class="fas fa-thumbtack"></i>
             </a>
@@ -64,6 +203,15 @@
                 <li><a href="#">Cocinar, trabajar, criar bendiciones, dormir</a></li>
                 <li><a href="#">Hacerle creer a un pelado que tiene razón</a></li>
                 <li><a href="#">Picar código como UN MONITO PICA-TECLA</a></li>
+                <li><a href="#">Picar código como UN MONITO PICA-TECLA</a></li>
+                <li><a href="#">Picar código como UN MONITO PICA-TECLA</a></li>
+                <li><a href="#">Picar código como UN MONITO PICA-TECLA</a></li>
+                <li><a href="#">Picar código como UN MONITO PICA-TECLA</a></li>
+                <li><a href="#">Picar código como UN MONITO PICA-TECLA</a></li>
+                <li><a href="#">Picar código como UN MONITO PICA-TECLA</a></li>
+                <li><a href="#">Picar código como UN MONITO PICA-TECLA</a></li>
+                <li><a href="#">Picar código como UN MONITO PICA-TECLA</a></li>
+                <li><a href="#">Picar código como UN MONITO PICA-TECLA</a></li>
                 <li><a href="#">Hacer noni</a></li>
             </ul>
             <ul id="status" class="minimal textCenter">
@@ -71,138 +219,6 @@
                 <li class="done">Completadas</li>
             </ul>
         </div>
-
-        <div id="sendWorkShortcut" class="grid center">
-            <a href="#" class="editBtn">
-                Necesito ayuda <i class="fas fa-thumbtack"></i>
-            </a>
-            <h2>Entrega tu tarea <span class="danger">urgente</span>.</h2>
-            <h3 class="legend">Debes entregarla en menos de 1 hora.</h3>
-            <h4>Sistemas operativos: "Explicar los 4 métodos de compresión explicados en clase"</h4>
-            <div class="grid-2 center gap">
-                <p>Si ya la has terminado, sube tu tarea.</p>
-                <button class="button upload center">Subir <i class="fas fa-upload"></i></button>
-            </div>
-        </div>
-
-        <div id="calendarWrapper" class="grid-2 gap">
-            <!-- Calendario que haga un flip al seleccionar la fecha, para mostrar más info -->
-            <div>
-                <ul id="calendarDays" class="minimal grid-7 gap">
-                    <li>D</li>
-                    <li>L</li>
-                    <li>M</li>
-                    <li>X</li>
-                    <li>J</li>
-                    <li>V</li>
-                    <li>S</li>
-                </ul>
-                <ul id="calendarDates" class="calendarBullets minimal grid-7 gap">
-                    <li class="legend">29</li>
-                    <li class="legend">30</li>
-                    <li>
-                        <a href="#">1</a>
-                    </li>
-                    <li>
-                        <a href="#">2</a>
-                    </li>
-                    <li>
-                        <a href="#">3</a>
-                    </li>
-                    <li>
-                        <a href="#">4</a>
-                    </li>
-                    <li>
-                        <a href="#">5</a>
-                    </li>
-                    <li>
-                        <a href="#">6</a>
-                    </li>
-                    <li>
-                        <a href="#">7</a>
-                    </li>
-                    <li>
-                        <a href="#">8</a>
-                    </li>
-                    <li>
-                        <a href="#">9</a>
-                    </li>
-                    <li>
-                        <a href="#">10</a>
-                    </li>
-                    <li>
-                        <a href="#">11</a>
-                    </li>
-                    <li>
-                        <a href="#">12</a>
-                    </li>
-                    <li>
-                        <a href="#">13</a>
-                    </li>
-                    <li>
-                        <a href="#">14</a>
-                    </li>
-                    <li>
-                        <a href="#">15</a>
-                    </li>
-                    <li>
-                        <a href="#">16</a>
-                    </li>
-                    <li>
-                        <a href="#">17</a>
-                    </li>
-                    <li>
-                        <a href="#">18</a>
-                    </li>
-                    <li>
-                        <a href="#">19</a>
-                    </li>
-                    <li>
-                        <a href="#">20</a>
-                    </li>
-                    <li>
-                        <a href="#">21</a>
-                    </li>
-                    <li>
-                        <a href="#">22</a>
-                    </li>
-                    <li>
-                        <a href="#">23</a>
-                    </li>
-                    <li>
-                        <a href="#">24</a>
-                    </li>
-                    <li>
-                        <a href="#">25</a>
-                    </li>
-                    <li>
-                        <a href="#">26</a>
-                    </li>
-                    <li>
-                        <a href="#">27</a>
-                    </li>
-                    <li>
-                        <a href="#">28</a>
-                    </li>
-                    <li>
-                        <a href="#">29</a>
-                    </li>
-                    <li>
-                        <a href="#">30</a>
-                    </li>
-                    <li>
-                        <a href="#">31</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="details">
-                <h2>31 de Diciembre</h2>
-                <h3 class="legend">Detalles</h3>
-                <p>En este día se festeja fin de año.</p>
-            </div>
-
-        </div> <!-- !#calendarWrapper -->
 
     </main>
 </body>

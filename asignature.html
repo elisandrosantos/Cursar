@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Basic CSS styling -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/grid.css" />
+    <link rel="stylesheet" href="assets/css/button.css" />
+    <!-- Profile CSS -->
+    <link rel="stylesheet" href="assets/css/profile.css" />
+    <!-- Asignature CSS -->
+    <link rel="stylesheet" href="assets/css/asignature.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css">
+    <!--  -->
+    <title>Programación 2 | Cursar</title>
+</head>
+<body>
+    <main id="asignature" class="wrapper">
+
+        <div id="asignatureWrapper" class="grid-2 gap rounded">
+            
+            <div class="teacherInfo">
+                <div class="avatar"></div>
+                <h2 class="legend marginTop">Alejandro Mostovoi</h2>
+                <ul class="minimal inline">
+                    <li>
+                        <a href="#">Enviar e-mail</a>
+                    </li>
+                    <li>
+                        <a href="#">Tareas creadas</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="taskInfo">
+                <h1>Tarea de Programación 2</h1>
+                <ol class="marginLeft">
+                    <li>Desarrolle la función ​ myStrCmp ​ ​ que permita comparar 2 cadenas. Esta función deberá devolver un entero con los siguientes valores:</li>
+                    <ul class="marginLeft">
+                        <li>0: en caso de que las cadenas sean iguales</li>
+                        <li>1: si la segunda cadena es mayor que la primera</li>
+                        <li>-1: si la segunda cadena es menor que la primera.</li>
+                    </ul>
+                    <li>Escriba una prueba que demuestre el uso de la función.</li>
+                    <li>Responda brevemente. ¿Qué tipo de punteros conviene implementar en la función y por qué?</li>
+                </ol>
+            </div>
+
+        </div>        
+
+
+        <ul id="comments" class="marginTop minimal inline">
+            <li class="comment rounded marginTop">
+                <div class="title">
+                    <h2 onmousedown="fadeIn()" class="rounded trigger">
+                        Micaela Botta
+                    </h2>
+                    <div id="profile" class="rounded displayNone fadeOut">
+                        <a class="editBtn">Cerrar</a>
+                        <div class="avatar default" style="margin-top: 62px;"></div>
+                        <h2 class="textCenter marginTop">Estudiante</h2>
+                        <ul id="allScoresWrapper" class="minimal">
+                            <li class="border red">5.1</li>
+                            <li class="border cyan semiTransparent hover">8.3</li>
+                            <li class="border darkGreen semiTransparent hover">9.0</li>
+                            <li class="border cyan semiTransparent hover">7.8</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="marginLeft">
+                    ¿¿Esto es <strong>una</strong> prueba??
+                </p>
+                <ul class="minimal inline textCenter marginTop">
+                    <li>
+                        <a href="#">Responder</a>
+                    </li>
+                    <li>
+                        <a href="#">Eliminar</a>
+                    </li>
+                </ul>
+            </li>
+            <!--  -->
+            <li class="comment rounded marginTop">
+                <div class="title">
+                    <h2 onmousedown="fadeIn()" class="rounded trigger">
+                        Elisandro Santos
+                    </h2>
+                </div>
+                <p class="marginLeft">
+                    Nos vemos en Diciembre profe.
+                </p>
+                <ul class="minimal inline textCenter marginTop">
+                    <li>
+                        <a href="#">Responder</a>
+                    </li>
+                    <li>
+                        <a href="#">Eliminar</a>
+                    </li>
+                </ul>
+            </li>
+            <!--  -->
+            <li class="comment rounded marginTop marginLeft">
+                <div class="title">
+                    <h2 onmousedown="fadeIn()" class="rounded trigger">
+                        Santiago Gimenez
+                    </h2>
+                </div>
+                <p class="marginLeft">
+                    MAIAMEEE
+                </p>
+                <ul class="minimal inline textCenter marginTop">
+                    <li>
+                        <a href="#">Responder</a>
+                    </li>
+                    <li>
+                        <a href="#">Eliminar</a>
+                    </li>
+                </ul>
+            </li>
+            <!--  -->
+            <li class="comment rounded marginTop">
+                <div class="title">
+                    <h2 onmousedown="fadeIn()" class="rounded trigger">
+                        Andrea Stadler
+                    </h2>
+                </div>
+                <p class="marginLeft">
+                    Este exámen de Programación aquí expuesto con una descripción de tal calibre merece un premio Nóbel de la paz.
+                </p>
+                <ul class="minimal inline textCenter marginTop">
+                    <li>
+                        <a href="#">Responder</a>
+                    </li>
+                    <li>
+                        <a href="#">Eliminar</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+    </main>
+    <script>
+        function fadeIn() {
+            document.getElementById('profile').classList.remove('displayNone');
+            document.getElementById('profile').classList.add('displayBlock');
+            setTimeout(function() {
+                document.getElementById('profile').classList.remove('fadeOut');
+                document.getElementById('profile').classList.add('fadeIn');
+            }, 25);
+        }
+    </script>
+</body>
+</html>

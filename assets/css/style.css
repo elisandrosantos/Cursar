@@ -31,8 +31,13 @@ p {
 }
 /*  */
 a {
+	color: var(--white);
+    text-decoration: none;
 	cursor: pointer;
 	text-decoration: none;
+}
+a:hover {
+	color: var(--cyan);
 }
 /* Colors */
 :root { /* Santiago Gimenez add-on */
@@ -55,7 +60,7 @@ a {
 	/*  */
 	--animation-timing: .5s;
 }
-.legend {color: var(--gray-alt)}
+.legend {color: var(--gray-alt) !important}
 /* Main */
 main.wrapper {
 	width: 80%;
@@ -84,6 +89,10 @@ span.danger, p.danger {
 	color: var(--red);
 }
 /* Lists */
+ul, ol {
+	line-height: 32px;
+	font-size: 16px;
+}
 ul.minimal {
 	list-style: none;
 	margin: 0;
@@ -94,12 +103,27 @@ ul.minimal li {
 	margin: 0;
 }
 ul.inline li {
+	max-width: 50%;
 	float: left;
 	margin: 0 var(--gap-md) 0 var(--gap-md)
 }
-ul {
-	line-height: 32px;
-	font-size: 16px;
+/* Avatar */
+.avatar {
+    width: 128px;
+    height: 128px;
+    margin: 0 auto;
+    border-radius: 100%;
+    background: var(--white) center / cover;
+}
+.avatar.default {
+    background-image: url('../img/avatar/default1.webp');
+}
+/* Semi transparent */
+.semiTransparent {
+	opacity: .8;
+}
+.semiTransparent.hover {
+	opacity: 1;
 }
 /* Clases que usamos en 99% de elementos, así que vale la pena re-utilizar */
 .rounded {
@@ -107,6 +131,23 @@ ul {
 }
 .border {
 	border: 1px solid var(--gray);
+}
+/* Classes which can I use for fading */
+.displayNone {
+	display: none;
+	transition: var(--animation-timing) ease-out;
+}
+.displayBlock {
+	display: block;
+	transition: var(--animation-timing) ease-out;
+}
+.fadeIn {
+	opacity: 1;
+	transition: var(--animation-timing) ease-out;
+}
+.fadeOut {
+	opacity: 0;
+	transition: var(--animation-timing) ease-out;
 }
 /* Responsive styling */
 .removeMobile, .removeMobileInline {
