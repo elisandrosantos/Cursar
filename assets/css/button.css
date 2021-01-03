@@ -1,12 +1,15 @@
 .button {
     min-width: 150px;
-    height: 50px;
+    max-width: 300px;
+    min-height: 50px;
+    display: block;
     border-radius: var(--gap-md);
     border: 1px solid var(--darkCyan);
     text-align: center;
     font-size: 18px;
     padding: var(--gap-md);
     cursor: pointer;
+    transition: box-shadow var(--animation-timing) ease-out;
 }
 .button:hover {
     box-shadow: 0 0 var(--gap-sm) var(--gray);

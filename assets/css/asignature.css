@@ -3,18 +3,15 @@
 }
 #asignatureWrapper {
     background: var(--darkBlue);
-    padding: var(--gap-md);
+    padding: var(--gap);
     color: var(--white)
 }
 #asignatureWrapper .teacherInfo {
     text-align: center;
 }
-#asignatureWrapper.grid-2 {
-    grid-template-columns: minmax(auto, 250px) auto;
-}
-#asignature ul#comments {
-    width: 60%;
-    margin: var(--gap) auto;
+#asignature ul#comments, #asignature #commentsTitle {
+    width: 90%;
+    margin: 0 auto;
 }
 #asignature ul#comments .comment {
     width: 100%;
@@ -35,28 +32,34 @@
     padding: 0 var(--gap-md) var(--gap-sm) var(--gap-md);
     border-bottom: var(--gap-sm) solid var(--white);
 }
-#asignature ul#comments .comment .title h2.trigger {
+#asignature ul#comments .comment .title h2 {
     cursor: pointer;
 }
 #asignature ul#comments .comment .title #profile {
     position: absolute;
-    width: 100%;
-    min-width: 250px;
+    width: 150%;
     top: 42px;
-    left: -20px;
+    left: 0;
+    padding-bottom: 92px; /* because #allScoresWrapper (pos: absolute) */
     background: var(--cyan);
     box-shadow: 0 0 var(--gap-md) var(--gray);
     z-index: 99;
 }
+#asignature ul#comments .comment .title #profile .button {
+    background: var(--darkBlue);
+    color: var(--white)
+}
+#asignature ul#comments .comment .title #profile .upload {
+    background: var(--darkGreen);
+}
 #asignature ul#comments .comment .title #profile h2 {
     border: none;
     padding: 0;
-    margin-bottom: 72px;
 }
 #asignature ul#comments .comment .title #profile #allScoresWrapper {
     width: 100%;
     height: 72px;
-    padding: var(--gap-sm) 0 0 var(--gap-md);
+    padding: var(--gap-sm) 0 0 var(--gap-sm);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -66,3 +69,11 @@
 /* #asignature ul#comments .comment p {
     marg
 } */
+@media (min-width: 768px) {
+    #asignature ul#comments, #asignature #commentsTitle {
+        width: 60%;
+    }
+    #asignatureWrapper.grid-2 {
+        grid-template-columns: minmax(auto, 250px) auto;
+    }
+}

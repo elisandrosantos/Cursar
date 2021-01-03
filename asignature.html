@@ -24,10 +24,10 @@
 
         <div id="asignatureWrapper" class="grid-2 gap rounded">
             
-            <div class="teacherInfo">
+            <div class="teacherInfo grid center">
                 <div class="avatar"></div>
                 <h2 class="legend marginTop">Alejandro Mostovoi</h2>
-                <ul class="minimal inline">
+                <ul style="width: 250px" class="center minimal inline">
                     <li>
                         <a href="#">Enviar e-mail</a>
                     </li>
@@ -52,17 +52,24 @@
 
         </div>        
 
+        <div id="commentsTitle" class="center grid-2 gap marginTop">
+            <h1>Comentarios</h1>
+            <a href="#" class="right button">Escribir comentario</a>
+        </div>
+        
 
-        <ul id="comments" class="marginTop minimal inline">
+        <ul id="comments" class="minimal">
             <li class="comment rounded marginTop">
                 <div class="title">
                     <h2 onmousedown="fadeIn()" class="rounded trigger">
                         Micaela Botta
                     </h2>
                     <div id="profile" class="rounded displayNone fadeOut">
-                        <a class="editBtn">Cerrar</a>
+                        <a onmousedown="fadeOut()" class="editBtn">Cerrar</a>
                         <div class="avatar default" style="margin-top: 62px;"></div>
                         <h2 class="textCenter marginTop">Estudiante</h2>
+                        <button class="button center">Enviar mensaje</button>
+                        <button class="button upload center marginTop">Tareas entregadas</button>
                         <ul id="allScoresWrapper" class="minimal">
                             <li class="border red">5.1</li>
                             <li class="border cyan semiTransparent hover">8.3</li>
@@ -145,12 +152,18 @@
     </main>
     <script>
         function fadeIn() {
-            document.getElementById('profile').classList.remove('displayNone');
+            document.getElementById('profile').classList.remove('displayNone', 'fadeOut');
             document.getElementById('profile').classList.add('displayBlock');
             setTimeout(function() {
-                document.getElementById('profile').classList.remove('fadeOut');
                 document.getElementById('profile').classList.add('fadeIn');
             }, 25);
+        }
+        function fadeOut() {
+            document.getElementById('profile').classList.remove('displayBlock', 'fadeIn');
+            document.getElementById('profile').classList.add('displayNone');
+            setTimeout(function() {
+                document.getElementById('profile').classList.remove('fadeOut');
+            }, 25);   
         }
     </script>
 </body>

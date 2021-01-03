@@ -100,6 +100,7 @@
     background: var(--darkBlue);
     max-height: 500px;
     padding: 0;
+    overflow-y: auto;
     /* padding: var(--gap); */
 }
 #profile #homeWork ul#status {
@@ -145,6 +146,7 @@
 /*  */
 #profile #calendarWrapper {
     width: 100%;
+    margin-top: var(--gap);
     /* height: 305px; */
 }
 #profile #calendarWrapper ul#calendarDays {
