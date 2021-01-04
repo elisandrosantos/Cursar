@@ -9,10 +9,11 @@
     font-size: 18px;
     padding: var(--gap-md);
     cursor: pointer;
-    transition: box-shadow var(--animation-timing) ease-out;
+    transition: all var(--animation-timing) ease-out;
 }
 .button:hover {
     box-shadow: 0 0 var(--gap-sm) var(--gray);
+    border-color: var(--cyan);
 }
 .button.upload {
     background: var(--cyan)

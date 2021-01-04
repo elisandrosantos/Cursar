@@ -6,9 +6,15 @@
 
 * [Manual de diseño](https://docs.google.com/document/d/1-OlrMKnjOO1wGCo973ow_qC9pJa4PkFqpsNkwY8ph24/edit?usp=sharing)
 
-# Screenshots of 30/12/2020
+# Screenshots of 04/01/2021
 ## Profile
 
-![profile page, viewed in 1080p laptop](screenshots/1080p-laptop.webp)
+![profile page, viewed in 900p laptop](screenshots/v0.1.0/profile-laptop-900p.webp)
 
-![profile page, viewed in iPad Pro 10.9"](screenshots/ipad-pro-10.9.webp)
+![profile page, viewed in iPhone 6S Plus](screenshots/v0.1.0/profile-iphone-6-plus.webp)
+
+## Asignature
+
+![asignature page, viewed in iPad Pro 12.9"](screenshots/v0.1.0/asignature-ipad-pro.webp)
+
+![asignature page, viewed in IPhone 6S Plus](screenshots/v0.1.0/asignature-iphone-6-plus.webp)

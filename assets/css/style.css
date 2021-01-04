@@ -44,7 +44,8 @@ a:hover {
 	--gray: #5b616d;
 	--gray-alt: #8990a0;
 	--darkBlue: #043345;
-	--violet: #5375e1;
+	--darkViolet: #5375e1;
+	--violet: #5c81fc;
 	--darkCyan: #0d9aac;
 	--cyan: #01b6c7;
 	--darkGreen: #009865;
@@ -63,9 +64,13 @@ a:hover {
 .legend {color: var(--gray-alt) !important}
 /* Main */
 main.wrapper {
-	width: 80%;
+	width: 90%;
 	margin: 0 auto;
-	/* 20% reserved for sidebar */
+}
+@media (min-width: 768px) {
+	main.wrapper {
+		width: 80%;
+	}
 }
 /* Alignment */
 .left {float: left}
@@ -83,6 +88,10 @@ main.wrapper {
 .border.darkGreen {border: var(--gap-sm) solid var(--darkGreen)}
 .border.darkBlue {border: var(--gap-sm) solid var(--darkBlue)}
 .border.red {border: var(--gap-sm) solid var(--red)}
+/* Shadow */
+.shadow {
+	box-shadow: 0 0 var(--gap) var(--gray);
+}
 /* Text */
 .textLeft {text-align: left}
 .textCenter {text-align: center}
@@ -120,8 +129,11 @@ ul.inline li {
     border-radius: 100%;
     background: var(--white) center / cover;
 }
-.avatar.default {
+.avatar.default1 {
     background-image: url('../img/avatar/default1.webp');
+}
+.avatar.default2 {
+    background-image: url('../img/avatar/default2.webp');
 }
 /* Semi transparent */
 .semiTransparent {

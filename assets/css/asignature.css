@@ -6,8 +6,11 @@
     padding: var(--gap);
     color: var(--white)
 }
+#asignatureWrapper.grid-2 .span {grid-column: 1}
 #asignatureWrapper .teacherInfo {
     text-align: center;
+    background: var(--darkCyan);
+    padding: var(--gap) 0 var(--gap) 0;
 }
 #asignature ul#comments, #asignature #commentsTitle {
     width: 90%;
@@ -18,11 +21,20 @@
     max-width: 100%;
     background: var(--darkCyan);
     padding: var(--gap-md);
+    transition: background var(--animation-timing) ease-out;
+}
+#asignature ul#comments .comment:hover {
+    box-shadow: 0 0 var(--gap) var(--gray);
+    background: var(--cyan);
 }
 #asignature ul#comments .comment.marginLeft {
     margin-left: 40px !important;
-    width: calc( 100% - 30px );
-    background: var(--violet)
+    width: calc( 100% - 40px );
+    background: var(--darkViolet)
+}
+#asignature ul#comments .comment.marginLeft:hover {
+    box-shadow: 0 0 var(--gap) var(--gray);
+    background: var(--violet);
 }
 #asignature ul#comments .comment .title {
     position: relative;
@@ -66,14 +78,29 @@
     background: var(--darkBlue);
     border-radius: 0 0 var(--gap-md) var(--gap-md);
 }
-/* #asignature ul#comments .comment p {
-    marg
-} */
+/* Comments title */
+#commentsTitle a.right {
+    float: none;
+    margin: 0 auto;
+}
 @media (min-width: 768px) {
+    #asignatureWrapper.grid-2 { /* replaces original grid styling */
+        grid-template-columns: 100%;
+    }
+}
+@media (min-width: 960px) { /* no lo pongo en 768px porque en 960 se ve mejor */
     #asignature ul#comments, #asignature #commentsTitle {
-        width: 60%;
+        width: 80%;
     }
     #asignatureWrapper.grid-2 {
-        grid-template-columns: minmax(auto, 250px) auto;
+        grid-template-columns: 250px auto;
+    }
+    #asignatureWrapper.grid-2 .span {grid-column: 1 / span 2}
+    #asignatureWrapper h1.textCenter {
+        padding-left: 250px;
+    }
+    #commentsTitle a.right {
+        float: right;
+        margin: 0;
     }
 }

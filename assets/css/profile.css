@@ -3,6 +3,7 @@
 }
 #profile .basicInfo {
     min-height: 600px;
+    padding: 42px var(--gap-md) var(--gap) var(--gap) !important;
 }
 #profile .basicInfo, #profile #homeWork, #profile #sendWorkShortcut {
     background: var(--darkBlue);
@@ -100,7 +101,6 @@
     background: var(--darkBlue);
     max-height: 500px;
     padding: 0;
-    overflow-y: auto;
     /* padding: var(--gap); */
 }
 #profile #homeWork ul#status {
@@ -123,8 +123,9 @@
 }
 #profile #homeWork ul#list {
     margin: 40px 0 40px 0;
-    height: calc(100% - 50px); /* patch for scroll with excesive height */
+    height: calc(100% - 80px); /* patch for scroll with excesive height */
     overflow-y: auto;
+    display: block;
 }
 #profile #homeWork ul#list li a {
     display: block;
